@@ -32,8 +32,10 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///workout.db")
+# db = SQL("sqlite:///workout.db")
 
+# To connect to a Postgresql heroku database
+db = SQL(os.getenv("postgres://jorqzsdckjpref:e757bbed8d7f33357c6c52e446df4b9863300b89ad7cdfbee42682a247e1e4cd@ec2-52-211-161-21.eu-west-1.compute.amazonaws.com:5432/d5gpufg0ht2tcv"))
 
 #global variable list for storing chosen picture
 chosen_exercise = []
