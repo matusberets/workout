@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <form action="/history" method="get">
+        <div class="form-group">
+            <table class="table table-striped">
+                <thead align="left">
+                    <tr>
+                        <th>Date and Time</th>
+                        <th>Exercise Type</th>
+                        <th>Series order</th>
+                        <th>Repetitions</th>
+                        <th>Weight</th>
+                    </tr>
+                </thead>
+                    <tbody  align="left">
+                    <tr>
+                     {% for row in rows %}
+                    <td>{{ row["datetime"] }}</td>
+                    <td>{{ row["exercise_name"] }}</td>
+                    <td>{{ row["series"] }}</td>
+                    <td>{{ row["reps"] }}</td>
+                    <td>{{ row["weight"] }} kg</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+            </table>
+        </div>
+    </form>
+{% endblock %}

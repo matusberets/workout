@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Pick Up Your Exerice
+{% endblock %}
+
+{% block main %}
+<!-- select menu !-->
+
+    <form action="/pickup" method="post">
+        <div class="form-group">
+             <select class="form-control" name="exercise_list">
+                <option disabled selected value>Exercise Type</option>
+                {% for row in rows %}
+                    <option value="{{ row.exercise_name }}">{{ row.exercise_name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- confirm selection !-->
+        <div class="form-group">
+            <button class="btn btn-primary green" type="submit">Submit</button>
+        </div>
+        </form>
+{% endblock %}

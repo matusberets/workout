@@ -1,0 +1,80 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .green
+{
+    color: #2e944b;
+    font-weight: bold;
+}
+
+nav .navbar-brand .black
+{
+    color: #000000;
+    font-size: 65%;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* Bootstrap's form width 100% */
+    width: auto;
+
+    /* set form color to green */
+    border-color: #2e944b;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+/* format error function text */
+main .form-group.error
+{
+    font-weight: bold;
+    color: red;
+}
+
+/* main form width adjustment / testing to make table more narrow
+main .form-group
+{
+    width: 50%;
+    align-content: center;
+}
+*/
+
+/* testing to make table more narrow
+main .container.p-5
+{
+    width:50%;
+}
+*/
+
+/* buttons color set to green */
+main .btn.btn-primary.green
+{
+    background-color: #2e944b;
+    border-color: #2e944b;
+}
+
+/* remove border around exercise picture */
+.card
+{
+    border-style: none
+}

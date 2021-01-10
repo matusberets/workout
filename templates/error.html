@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block main %}
+
+    <form action="/error" method="get">
+        <div class="form-group error">
+            <p>{{ text }}</p>
+        </div>
+    </form>
+
+{% endblock %}

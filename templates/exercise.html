@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Do your workout !
+{% endblock %}
+
+{% block main %}
+<!-- select menu !-->
+    <form action="/exercise" method="post">
+       <div class="form-group">
+            <div class="card" style="width: auto">
+                <div class="card-body" align="middle">
+                    <img src="/static/{{ chosen_exercise }}" alt="Picture should be shown here" width="360px" height="360px">
+                </div>
+            </div>
+
+            <!-- table head !-->
+            <table class="table table-striped">
+                <thead>
+                    <tr align="left">
+                        <th>Series order</th>
+                        <th>Repetitions</th>
+                        <th>Weight</th>
+                    </tr>
+                </thead>
+                    <!-- input for entering users workout experience !-->
+                    <tbody>
+                                <!--first rep ... actually the reason I generate inputs manually is that I need get all input names so i can used them later for database entry !-->
+                                <tr align="left">
+                                <td><input style="background-color: #FFFFFF" autocomplete="off" type="number" class="form-control" name="series1" value="1"></input></td>
+                                <td><input autocomplete="off" autofocus class="form-control" min="1" name="reps1" placeholder="reps" type="number"></input></td>
+                                <td><input autocomplete="off" autofocus class="form-control" min="1" name="weight1" placeholder="kg" type="number"></input></td>
+                                </tr>
+
+                                <tr align="left">
+                                <td><input style="background-color: #FFFFFF" autocomplete="off" type="number" class="form-control" name="series2" value="2"></input></td>
+                                <td><input autocomplete="off" autofocus class="form-control" min="1" name="reps2" placeholder="reps" type="number"></input></td>
+                                <td><input autocomplete="off" autofocus class="form-control" min="1" name="weight2" placeholder="kg" type="number"></input></td>
+                                </tr>
+
+                                <tr align="left">
+                                <td><input style="background-color: #FFFFFF" autocomplete="off" type="number" class="form-control" name="series3" value="3"></input></td>
+                                <td><input autocomplete="off" autofocus class="form-control" min="1" name="reps3" placeholder="reps" type="number"></input></td>
+                                <td><input autocomplete="off" autofocus class="form-control" min="1" name="weight3" placeholder="kg" type="number"></input></td>
+                                </tr>
+
+                                <tr align="left">
+                                <td><input style="background-color: #FFFFFF" autocomplete="off" type="number" class="form-control" name="series4" value="4"></input></td>
+                                <td><input autocomplete="off" autofocus class="form-control" min="1" name="reps4" placeholder="reps" type="number"></input></td>
+                                <td><input autocomplete="off" autofocus class="form-control" min="1" name="weight4" placeholder="kg" type="number"></input></td>
+                                </tr>
+                    </tbody>
+            </table>
+
+        <button class="btn btn-primary green" type="submit">Submit</button>
+        </div>
+    </form>
+{% endblock %}
