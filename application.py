@@ -1,6 +1,7 @@
 # I used a code from CS50 ProblemSet no.8. Thank you for that CS50 team !
 import os
 import sys
+import psycopg2
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
@@ -181,3 +182,8 @@ def history():
     #select data to be shown based on user logged in
     rows = db.execute("SELECT datetime, exercise_name, series, reps, weight FROM history WHERE id = ?", session["user_id"])
     return render_template("history.html", rows=rows)
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
